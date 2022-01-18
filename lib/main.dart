@@ -4,22 +4,61 @@ import 'package:flutter/services.dart';
 main() {
   var ischeck = false;
   runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Scaffold(
-        appBar: AppBar(
-          title: Text("asdfgh jkjk"), // sajibmridha.nor   01660185714
-
-          centerTitle: true,
-        ),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Column(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text("asdfgh jkjk"),
+            centerTitle: true,
+          ),
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                Column(
                   // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   // crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
+                    Row(
+                      children: [
+                        Text("data"),
+                        SizedBox(
+                          width: 300,
+                        ),
+                        Text("data")
+                      ],
+                    ),
+                    Container(
+                      height: 200,
+                      width: double.infinity,
+                      child: ColoredBox(color: Colors.amber),
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black,
+                              spreadRadius: 2,
+                              blurRadius: 4,
+                              offset: Offset(0, 5)),
+                        ],
+                        color: Colors.red,
+                        shape: BoxShape.rectangle,
+                        border: Border.all(width: 8, color: Colors.cyan),
+                        borderRadius: BorderRadius.only(
+                          bottomRight: Radius.circular(30),
+                          topLeft: Radius.circular(30),
+                        ),
+                      ),
+                      height: 300,
+                      width: 350,
+                      child: Image.asset(
+                        "images/imag.jpg",
+                        // fit: BoxFit.cover,
+                      ),
+                    ),
+
                     // Center(
                     //     child: Padding(
                     //   padding: const EdgeInsets.all(8.0),
@@ -27,7 +66,8 @@ main() {
                     //     "history of london",
                     //     style: TextStyle(
                     //         fontSize: 25,
-                    //         fontStyle: FontStyle.italic,
+                    //         fontStyle: FontSt
+                    // yle.italic,
                     //         fontWeight: FontWeight.bold,
                     //         color: Colors.deepPurple,
                     //         backgroundColor: Colors.yellow),
@@ -37,32 +77,19 @@ main() {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Center(
-                        child: Container(
-                          height: 300,
-                          width: 400,
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage(
-                                "images/imag.jpg",
-                              )),
-                              color: Colors.green,
-                              shape: BoxShape.rectangle,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey,
-                                  spreadRadius: 3,
-                                  blurRadius: 5,
-                                  offset: Offset(
-                                      5, 5), // changes position of shadow
-                                ),
-                              ],
-                              border:
-                                  Border.all(width: 10, color: Colors.yellow),
-                              borderRadius: BorderRadius.only(
-                                  bottomRight: Radius.circular(60),
-                                  topLeft: Radius.circular(60))),
-                          // child: Image.asset("images/imag.jpg")
-                        ),
+                          child: Container(
+                        height: 300,
+                        width: 400,
+                      )),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Divider(
+                        height: 4,
+                        endIndent: 20,
+                        indent: 20,
+                        thickness: 1,
+                        color: Colors.red,
                       ),
                     ),
                     Checkbox(
@@ -73,7 +100,15 @@ main() {
                         value: ischeck,
                         onChanged: (T) {
                           ischeck = T!;
-                        })
+                        }),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Divider(
+                        height: 4,
+                        thickness: 2,
+                        color: Colors.green,
+                      ),
+                    )
 
                     // Container(
                     //   height: 200,
@@ -128,9 +163,7 @@ main() {
                     // ),
                   ],
                 ),
-              ),
-            ],
-          ),
-        )),
-  ));
+              ],
+            ),
+          ))));
 }
