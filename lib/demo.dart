@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-main() {
-  // var ischeck = false;
-  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Home()));
-}
+
 
 
 
