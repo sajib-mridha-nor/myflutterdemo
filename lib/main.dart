@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:myflutterdemo/ab2001d3.dart';
 import 'package:myflutterdemo/day5.dart';
+import 'package:myflutterdemo/day6.dart';
+import 'package:myflutterdemo/day6part2.dart';
 import 'package:myflutterdemo/home.dart';
 
 // import 'package:myflutterdemo/home.dart';
@@ -15,7 +17,7 @@ class Myhome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyTextField(),
+      home: PageViewDemo(),
     );
   }
 }
