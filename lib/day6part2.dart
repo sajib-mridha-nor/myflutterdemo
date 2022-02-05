@@ -50,3 +50,28 @@ class PageViewDemo extends StatelessWidget {
 //     );
   }
 }
+class SF extends StatefulWidget {
+  const SF({ Key? key }) : super(key: key);
+
+  @override
+  _SFState createState() => _SFState();
+}
+
+class _SFState extends State<SF> {
+
+
+  @override
+  Widget build(BuildContext context) {
+    return SL();
+  }
+}
+
+class SL extends StatelessWidget {
+  const SL({ Key? key }) : super(key: key);
+
+
+  @override
+  Widget build(BuildContext context) {
+    return SF();
+  }
+}

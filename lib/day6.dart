@@ -18,7 +18,7 @@ class ResponsibeUI extends StatelessWidget {
                 child: Container(
                     width: double.infinity,
                     color: Colors.grey,
-                    child: Text("Flutter Responsive UI")),
+                    child: Text("Flutter Responsive UF")),
               )),
           Expanded(
             flex: 3,
